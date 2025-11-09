@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.25)  8 NOV 2025 23:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.25)  9 NOV 2025 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1100,10 +1100,36 @@ Package caption Info: New subtype `subtable' on input line 238.
 ) (./gvv.sty
 \c@matchleft=\count340
 \c@matchright=\count341
-) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+)
+
+! LaTeX Error: Two \documentclass or \documentstyle commands.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \documentclass{
+                    article}
+? 
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count342
+\float@exts=\toks45
+\float@box=\box76
+\@float@everytoks=\toks46
+\@floatcapt=\box77
+)
+\@float@every@algorithm=\toks47
+\c@algorithm=\count343
+)
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks45
-\inpenc@posthook=\toks46
+\inpenc@prehook=\toks48
+\inpenc@posthook=\toks49
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2021/02/14 v1.3d Input encoding file
@@ -1111,12 +1137,12 @@ File: latin1.def 2021/02/14 v1.3d Input encoding file
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen332
-\ar@mcellbox=\box76
+\ar@mcellbox=\box78
 \extrarowheight=\dimen333
-\NC@list=\toks47
+\NC@list=\toks50
 \extratabsurround=\skip65
 \backup@length=\skip66
-\ar@cellbox=\box77
+\ar@cellbox=\box79
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
@@ -1124,52 +1150,50 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \LTright=\skip68
 \LTpre=\skip69
 \LTpost=\skip70
-\LTchunksize=\count342
+\LTchunksize=\count344
 \LTcapwidth=\dimen334
-\LT@head=\box78
-\LT@firsthead=\box79
-\LT@foot=\box80
-\LT@lastfoot=\box81
-\LT@gbox=\box82
-\LT@cols=\count343
-\LT@rows=\count344
-\c@LT@tables=\count345
-\c@LT@chunks=\count346
-\LT@p@ftn=\toks48
+\LT@head=\box80
+\LT@firsthead=\box81
+\LT@foot=\box82
+\LT@lastfoot=\box83
+\LT@gbox=\box84
+\LT@cols=\count345
+\LT@rows=\count346
+\c@LT@tables=\count347
+\c@LT@chunks=\count348
+\LT@p@ftn=\toks51
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip71
-\multirow@cntb=\count347
+\multirow@cntb=\count349
 \multirow@dima=\skip72
 \bigstrutjot=\dimen335
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count348
-\mult@box=\box83
+\c@tracingmulticols=\count350
+\mult@box=\box85
 \multicol@leftmargin=\dimen336
-\c@unbalance=\count349
-\c@collectmore=\count350
-\doublecol@number=\count351
-\multicoltolerance=\count352
-\multicolpretolerance=\count353
+\c@unbalance=\count351
+\c@collectmore=\count352
+\doublecol@number=\count353
+\multicoltolerance=\count354
+\multicolpretolerance=\count355
 \full@width=\dimen337
 \page@free=\dimen338
 \premulticols=\dimen339
 \postmulticols=\dimen340
 \multicolsep=\skip73
 \multicolbaselineskip=\skip74
-\partial@page=\box84
-\last@line=\box85
-\mc@boxedresult=\box86
+\partial@page=\box86
+\last@line=\box87
+\mc@boxedresult=\box88
 \maxbalancingoverflow=\dimen341
-\mult@rightbox=\box87
-\mult@grightbox=\box88
-\mult@firstbox=\box89
-\mult@gfirstbox=\box90
-\@tempa=\box91
-\@tempa=\box92
+\mult@rightbox=\box89
+\mult@grightbox=\box90
+\mult@firstbox=\box91
+\mult@gfirstbox=\box92
 \@tempa=\box93
 \@tempa=\box94
 \@tempa=\box95
@@ -1204,15 +1228,17 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box124
 \@tempa=\box125
 \@tempa=\box126
-\c@minrows=\count354
-\c@columnbadness=\count355
-\c@finalcolumnbadness=\count356
+\@tempa=\box127
+\@tempa=\box128
+\c@minrows=\count356
+\c@columnbadness=\count357
+\c@finalcolumnbadness=\count358
 \last@try=\dimen342
 \multicolovershoot=\dimen343
 \multicolundershoot=\dimen344
-\mult@nat@firstbox=\box127
-\colbreak@box=\box128
-\mc@col@check@num=\count357
+\mult@nat@firstbox=\box129
+\colbreak@box=\box130
+\mc@col@check@num=\count359
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/hhline.sty
 Package: hhline 2020/01/04 v2.04 Table rule package (DPC)
@@ -1227,22 +1253,14 @@ Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
 \TX@old@col=\dimen347
 \TX@target=\dimen348
 \TX@delta=\dimen349
-\TX@cols=\count358
-\TX@ftn=\toks49
+\TX@cols=\count360
+\TX@ftn=\toks52
 )
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count359
-\float@exts=\toks50
-\float@box=\box129
-\@float@everytoks=\toks51
-\@floatcapt=\box130
-)
-\c@theorem=\count360
-\c@problem=\count361
-\c@proposition=\count362
-\c@lemma=\count363
-\c@example=\count364
+\c@theorem=\count361
+\c@problem=\count362
+\c@proposition=\count363
+\c@lemma=\count364
+\c@example=\count365
 
 (/usr/share/texlive/texmf-dist/tex/latex/circuitikz/circuitikz.sty
 Package: circuitikz 2023/12/09{} The CircuiTikz circuit drawing package version
@@ -1273,9 +1291,9 @@ File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@arrows@the@rigidity=\dimen356
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
-\pgf@circ@count@a=\count365
-\pgf@circ@count@b=\count366
-\pgf@circ@count@c=\count367
+\pgf@circ@count@a=\count366
+\pgf@circ@count@b=\count367
+\pgf@circ@count@c=\count368
 \pgf@circ@res@up=\dimen357
 \pgf@circ@res@down=\dimen358
 \pgf@circ@res@zero=\dimen359
@@ -1296,7 +1314,7 @@ File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
-\pgf@circ@res@count=\count368
+\pgf@circ@res@count=\count369
 )
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex)
@@ -1307,7 +1325,7 @@ File: pgflibrarycurvilinear.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex))
 LaTeX Font Info:    Trying to load font information for OT1+txr on input line 5
-4.
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
@@ -1330,101 +1348,113 @@ LaTeX Warning: Label `fig:placeholder' multiply defined.
 
 LaTeX Warning: Label `fig:placeholder' multiply defined.
 
+
+LaTeX Warning: Label `fig:placeholder' multiply defined.
+
+
+LaTeX Warning: Label `fig:compressed_c_code' multiply defined.
+
+
+LaTeX Warning: Label `fig:placeholder' multiply defined.
+
+
+LaTeX Warning: Label `fig:compressed_c_code' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 54.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 58.
 LaTeX Font Info:    Trying to load font information for OML+txmi on input line 
-54.
+58.
  (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 58.
 LaTeX Font Info:    Trying to load font information for OMS+txsy on input line 
-54.
+58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 58.
 LaTeX Font Info:    Trying to load font information for OMX+txex on input line 
-54.
+58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 58.
 LaTeX Font Info:    Trying to load font information for U+txexa on input line 5
-4.
+8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <6> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <6> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <8> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <8> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <9> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <9> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <10> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <12> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <12> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <14> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <14> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <20> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <20> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <22> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <22> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/n' in size <24> not available
-(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/txr/b/it' in size <24> not available
-(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 54.
+(Font)              Font shape `OT1/txr/bx/it' tried instead on input line 58.
 
 -- Lines per column: 50 (exact).
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count369
+\scratchcounter=\count370
 \scratchdimen=\dimen369
 \scratchbox=\box132
-\nofMPsegments=\count370
-\nofMParguments=\count371
-\everyMPshowfont=\toks52
-\MPscratchCnt=\count372
+\nofMPsegments=\count371
+\nofMParguments=\count372
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count373
 \MPscratchDim=\dimen370
-\MPnumerator=\count373
-\makeMPintoPDFobject=\count374
-\everyMPtoPDFconversion=\toks53
+\MPnumerator=\count374
+\makeMPintoPDFobject=\count375
+\everyMPtoPDFconversion=\toks54
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1434,19 +1464,19 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count375
+\c@lstlisting=\count376
 \symgns@font=\mathgroup10
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/txr/m/n --> TS1/txr/b/n on input line 54.
-Package gensymb Info: Math companion symbols declared on input line 54.
-LaTeX Info: Redefining \degree on input line 54.
-LaTeX Info: Redefining \celsius on input line 54.
+(Font)                  TS1/txr/m/n --> TS1/txr/b/n on input line 58.
+Package gensymb Info: Math companion symbols declared on input line 58.
+LaTeX Info: Redefining \degree on input line 58.
+LaTeX Info: Redefining \celsius on input line 58.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 54.
-LaTeX Info: Redefining \ohm on input line 54.
-Package gensymb Info: Using \textohm for \ohm on input line 54.
-Package gensymb Info: Using \textmu for \micro on input line 54.
-Package hyperref Info: Link coloring OFF on input line 54.
+erthousand on input line 58.
+LaTeX Info: Redefining \ohm on input line 58.
+Package gensymb Info: Using \textohm for \ohm on input line 58.
+Package gensymb Info: Using \textmu for \micro on input line 58.
+Package hyperref Info: Link coloring OFF on input line 58.
 
 (./main.out) (./main.out)
 \@outlinefile=\write5
@@ -1461,41 +1491,41 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for U+txsya on input line 6
-2.
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyb on input line 6
-2.
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txmia on input line 6
-2.
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for U+txsyc on input line 6
-2.
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Trying to load font information for TS1+txr on input line 6
-2.
+6.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
+Underfull \hbox (badness 10000) in paragraph at lines 69--73
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
@@ -1579,7 +1609,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.90 
+l.94 
      
 ? 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
@@ -1587,7 +1617,7 @@ dist/fonts/enc/dvips/base/8r.enc}] [2] [3] (./tables/error_jpeg.tex)
 <figs/plot_error_jpg.png, id=112, 578.16pt x 433.62pt>
 File: figs/plot_error_jpg.png Graphic file (type png)
 <use figs/plot_error_jpg.png>
-Package pdftex.def Info: figs/plot_error_jpg.png  used on input line 195.
+Package pdftex.def Info: figs/plot_error_jpg.png  used on input line 199.
 (pdftex.def)             Requested size: 258.0pt x 193.49953pt.
 
 (./tables/error_jpeg.tex
@@ -1598,62 +1628,21 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <figs/plot_error_png.png, id=114, 578.16pt x 433.62pt>
 File: figs/plot_error_png.png Graphic file (type png)
 <use figs/plot_error_png.png>
-Package pdftex.def Info: figs/plot_error_png.png  used on input line 204.
+Package pdftex.def Info: figs/plot_error_png.png  used on input line 208.
 (pdftex.def)             Requested size: 258.0pt x 193.49953pt.
  [4 <./figs/plot_error_jpg.png>] (./tables/time_jpeg.tex)
 <figs/plot_time_jpg.png, id=122, 578.16pt x 433.62pt>
 File: figs/plot_time_jpg.png Graphic file (type png)
 <use figs/plot_time_jpg.png>
-Package pdftex.def Info: figs/plot_time_jpg.png  used on input line 213.
+Package pdftex.def Info: figs/plot_time_jpg.png  used on input line 217.
 (pdftex.def)             Requested size: 258.0pt x 193.49953pt.
  [5 <./figs/plot_error_png.png>] (./tables/time_jpeg.tex)
 <figs/plot_time_png.png, id=131, 578.16pt x 433.62pt>
 File: figs/plot_time_png.png Graphic file (type png)
 <use figs/plot_time_png.png>
-Package pdftex.def Info: figs/plot_time_png.png  used on input line 222.
+Package pdftex.def Info: figs/plot_time_png.png  used on input line 226.
 (pdftex.def)             Requested size: 258.0pt x 193.49953pt.
-LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
-229.
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
-File: ot1txtt.fd 2000/12/15 v3.1
-) [6 <./figs/plot_time_jpg.png> <./figs/plot_time_png.png>] [7]
-Overfull \hbox (126.59875pt too wide) in paragraph at lines 658--658
-[]\OT1/txtt/m/n/12 int write_jpeg(const char *filename, unsigned char *gray_dat
-a, int width, int height) {//, int quality[] 
- []
-
-
-Overfull \hbox (0.599pt too wide) in paragraph at lines 658--658
-[]        \OT1/txtt/m/n/12 unsigned char *row_pointer = &gray_data[cinfo.next_s
-canline * row_stride];[] 
- []
-
-[8] [9]
-Overfull \hbox (19.49896pt too wide) in paragraph at lines 658--658
-[]\OT1/txtt/m/n/12 int write_pgm(const char *filename, const unsigned char *dat
-a, int width, int height)[] 
- []
-
-
-Overfull \hbox (50.9989pt too wide) in paragraph at lines 658--658
-[]    \OT1/txtt/m/n/12 png_structp png_ptr = png_create_read_struct(PNG_LIBPNG_
-VER_STRING, NULL, NULL, NULL);[] 
- []
-
-
-Overfull \hbox (76.19885pt too wide) in paragraph at lines 658--658
-[]    \OT1/txtt/m/n/12 if (!info_ptr) { png_destroy_read_struct(&png_ptr, NULL,
- NULL); fclose(fp); return NULL; }[] 
- []
-
-[10] [11]
-Overfull \hbox (25.79895pt too wide) in paragraph at lines 658--658
-[]                \OT1/txtt/m/n/12 if ((fabs(gamma) < error * sqrt(alpha * beta
-))|| gamma==0.0) continue;[] 
- []
-
-[12]
+ [6 <./figs/plot_time_jpg.png> <./figs/plot_time_png.png>]
 
 ! Package inputenc Error: Keyboard character used is undefined
 (inputenc)                in inputencoding `latin1'.
@@ -1662,61 +1651,295 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.658 \end{verbatim}
+l.243 \STATE \hspace{4em} sum += mat1[i*w1 + k] √ó
+                                                   mat2[k*w2 + j]
+? 
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 267.
+! Undefined control sequence.
+l.268 \KwIn
+           {PGM grayscale image file path, integer $k$ (number of singular v...
+
+? 
+! Undefined control sequence.
+l.269 \KwOut
+            {Compressed image, Frobenius error, and runtime}
+? 
+! Undefined control sequence.
+l.271 \BlankLine
+                
+? 
+! Undefined control sequence.
+l.278 \If
+         {format == P5}{
+? 
+! Undefined control sequence.
+l.281 \Else
+           {
+? 
+! Undefined control sequence.
+l.287 \BlankLine
+                
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 write header: ‚Ä
+                      úP5 width height 255‚Äù\;
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 write header: ‚Äú
+                       P5 width height 255‚Äù\;
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 write header: ‚ÄúP5 width height 255‚Ä
+                                            ù\;
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.291 write header: ‚ÄúP5 width height 255‚Äù
+                                             \;
+? 
+! Undefined control sequence.
+l.295 \BlankLine
+                
+? 
+! Undefined control sequence.
+l.303 \BlankLine
+                
+? 
+! Undefined control sequence.
+l.308 \BlankLine
+                
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.311 read the image using Step 1 ‚Ü
+                                    í $A$\;
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.311 read the image using Step 1 ‚Üí
+                                      $A$\;
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.313 print image dimensions (width √ó
+                                       height)\;
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.316 perform compression using Step 3 ‚Ü
+                                         í $(A_k, S)$\;
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.316 perform compression using Step 3 ‚Üí
+                                           $(A_k, S)$\;
+? 
+[7]
+LaTeX Font Info:    Trying to load font information for OT1+txtt on input line 
+329.
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ot1txtt.fd
+File: ot1txtt.fd 2000/12/15 v3.1
+) [8]
+Overfull \hbox (126.59875pt too wide) in paragraph at lines 759--759
+[]\OT1/txtt/m/n/12 int write_jpeg(const char *filename, unsigned char *gray_dat
+a, int width, int height) {//, int quality[] 
+ []
+
+[9]
+Overfull \hbox (0.599pt too wide) in paragraph at lines 759--759
+[]        \OT1/txtt/m/n/12 unsigned char *row_pointer = &gray_data[cinfo.next_s
+canline * row_stride];[] 
+ []
+
+[10]
+Overfull \hbox (19.49896pt too wide) in paragraph at lines 759--759
+[]\OT1/txtt/m/n/12 int write_pgm(const char *filename, const unsigned char *dat
+a, int width, int height)[] 
+ []
+
+[11]
+Overfull \hbox (50.9989pt too wide) in paragraph at lines 759--759
+[]    \OT1/txtt/m/n/12 png_structp png_ptr = png_create_read_struct(PNG_LIBPNG_
+VER_STRING, NULL, NULL, NULL);[] 
+ []
+
+
+Overfull \hbox (76.19885pt too wide) in paragraph at lines 759--759
+[]    \OT1/txtt/m/n/12 if (!info_ptr) { png_destroy_read_struct(&png_ptr, NULL,
+ NULL); fclose(fp); return NULL; }[] 
+ []
+
+[12]
+Overfull \hbox (25.79895pt too wide) in paragraph at lines 759--759
+[]                \OT1/txtt/m/n/12 if ((fabs(gamma) < error * sqrt(alpha * beta
+))|| gamma==0.0) continue;[] 
+ []
+
+[13]
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.759 \end{verbatim}
                     
 ? 
-[13]
-Overfull \hbox (19.49896pt too wide) in paragraph at lines 658--658
+[14] [15]
+Overfull \hbox (19.49896pt too wide) in paragraph at lines 759--759
 []    \OT1/txtt/m/n/12 unsigned char *img = read_pgm("../../figs/input_pgm/inpu
 t.pgm", &width, &height);[] 
  []
 
-[14]
-Overfull \hbox (6.89899pt too wide) in paragraph at lines 658--658
+
+Overfull \hbox (6.89899pt too wide) in paragraph at lines 759--759
 []    \OT1/txtt/m/n/12 write_pgm("../../figs/output_pgm/compressed_output.pgm",
  recon, width, height);[] 
  []
 
 
-Overfull \hbox (25.79895pt too wide) in paragraph at lines 658--658
+Overfull \hbox (25.79895pt too wide) in paragraph at lines 759--759
 []    \OT1/txtt/m/n/12 write_jpeg("../../figs/output_jpg_png/compressed_output.
 jpg",recon, width,height);[] 
  []
 
-[15]
-Overfull \hbox (38.39893pt too wide) in paragraph at lines 740--740
+[16] [17]
+Overfull \hbox (38.39893pt too wide) in paragraph at lines 841--841
 []\OT1/txtt/m/n/12 filename = input("Enter PGM file path (e.g., ../../figs/inpu
 t_pgm/input.pgm): ").strip()[] 
  []
 
-[16]
-<figs/globe.jpg, id=185, 843.15pt x 882.29625pt>
+<figs/globe.jpg, id=216, 843.15pt x 882.29625pt>
 File: figs/globe.jpg Graphic file (type jpg)
 <use figs/globe.jpg>
-Package pdftex.def Info: figs/globe.jpg  used on input line 746.
+Package pdftex.def Info: figs/globe.jpg  used on input line 847.
 (pdftex.def)             Requested size: 258.0pt x 269.98177pt.
-<figs/output1.jpg, id=186, 843.15pt x 882.29625pt>
+[18]
+<figs/output1.jpg, id=221, 843.15pt x 882.29625pt>
 File: figs/output1.jpg Graphic file (type jpg)
 <use figs/output1.jpg>
-Package pdftex.def Info: figs/output1.jpg  used on input line 758.
+Package pdftex.def Info: figs/output1.jpg  used on input line 859.
 (pdftex.def)             Requested size: 165.12378pt x 172.78079pt.
-<figs/output2.jpg, id=187, 843.15pt x 882.29625pt>
+<figs/output2.jpg, id=222, 843.15pt x 882.29625pt>
 File: figs/output2.jpg Graphic file (type jpg)
 <use figs/output2.jpg>
-Package pdftex.def Info: figs/output2.jpg  used on input line 765.
+Package pdftex.def Info: figs/output2.jpg  used on input line 866.
 (pdftex.def)             Requested size: 165.12378pt x 172.78079pt.
-<figs/output3.jpg, id=188, 843.15pt x 882.29625pt>
+<figs/output3.jpg, id=223, 843.15pt x 882.29625pt>
 File: figs/output3.jpg Graphic file (type jpg)
 <use figs/output3.jpg>
-Package pdftex.def Info: figs/output3.jpg  used on input line 772.
+Package pdftex.def Info: figs/output3.jpg  used on input line 873.
 (pdftex.def)             Requested size: 165.12378pt x 172.78079pt.
- [17 <./figs/globe.jpg>] [18 <./figs/output1.jpg> <./figs/output2.jpg> <./figs/
-output3.jpg>] (./main.aux)
+<figs/greyscale.png, id=224, 1027.84pt x 1027.84pt>
+File: figs/greyscale.png Graphic file (type png)
+<use figs/greyscale.png>
+Package pdftex.def Info: figs/greyscale.png  used on input line 883.
+(pdftex.def)             Requested size: 258.0pt x 257.99448pt.
+ [19 <./figs/globe.jpg> <./figs/output1.jpg> <./figs/output2.jpg> <./figs/outpu
+t3.jpg>]
+<figs/greyscale2.jpg, id=232, 1027.84pt x 1027.84pt>
+File: figs/greyscale2.jpg Graphic file (type jpg)
+<use figs/greyscale2.jpg>
+Package pdftex.def Info: figs/greyscale2.jpg  used on input line 895.
+(pdftex.def)             Requested size: 165.12378pt x 165.11647pt.
+<figs/greyscale3.jpg, id=233, 1027.84pt x 1027.84pt>
+File: figs/greyscale3.jpg Graphic file (type jpg)
+<use figs/greyscale3.jpg>
+Package pdftex.def Info: figs/greyscale3.jpg  used on input line 902.
+(pdftex.def)             Requested size: 165.12378pt x 165.11647pt.
+<figs/greyscale1.jpg, id=234, 1027.84pt x 1027.84pt>
+File: figs/greyscale1.jpg Graphic file (type jpg)
+<use figs/greyscale1.jpg>
+Package pdftex.def Info: figs/greyscale1.jpg  used on input line 909.
+(pdftex.def)             Requested size: 165.12378pt x 165.11647pt.
+<figs/einstein.jpg, id=235, 186.6975pt x 182.6825pt>
+File: figs/einstein.jpg Graphic file (type jpg)
+<use figs/einstein.jpg>
+Package pdftex.def Info: figs/einstein.jpg  used on input line 919.
+(pdftex.def)             Requested size: 258.0pt x 252.46448pt.
+ [20 <./figs/greyscale.png (PNG copy)> <./figs/greyscale2.jpg> <./figs/greyscal
+e3.jpg> <./figs/greyscale1.jpg>]
+<figs/einstein3.jpg, id=242, 186.6975pt x 182.6825pt>
+File: figs/einstein3.jpg Graphic file (type jpg)
+<use figs/einstein3.jpg>
+Package pdftex.def Info: figs/einstein3.jpg  used on input line 931.
+(pdftex.def)             Requested size: 165.12378pt x 161.5806pt.
+<figs/einstein2.jpg, id=243, 186.6975pt x 182.6825pt>
+File: figs/einstein2.jpg Graphic file (type jpg)
+<use figs/einstein2.jpg>
+Package pdftex.def Info: figs/einstein2.jpg  used on input line 938.
+(pdftex.def)             Requested size: 165.12378pt x 161.5806pt.
+<figs/einstein1.jpg, id=244, 186.6975pt x 182.6825pt>
+File: figs/einstein1.jpg Graphic file (type jpg)
+<use figs/einstein1.jpg>
+Package pdftex.def Info: figs/einstein1.jpg  used on input line 945.
+(pdftex.def)             Requested size: 165.12378pt x 161.5806pt.
+ [21 <./figs/einstein.jpg> <./figs/einstein3.jpg> <./figs/einstein2.jpg> <./fig
+s/einstein1.jpg>] [22] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
-
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1724,28 +1947,28 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D13D26D86E6710BFBE2069C71C793641;2933.
  ) 
 Here is how much of TeX's memory you used:
- 48298 strings out of 474222
- 1120551 string characters out of 5748733
+ 48484 strings out of 474222
+ 1123898 string characters out of 5748733
  1947975 words of memory out of 5000000
- 69739 multiletter control sequences out of 15000+600000
+ 69888 multiletter control sequences out of 15000+600000
  639732 words of font info for 209 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 101i,12n,103p,1172b,610s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,12n,103p,1172b,667s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxb.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfont
-s/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/txfonts/txtt.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmri8a.pfb>
-Output written on main.pdf (18 pages, 804736 bytes).
+e/texlive/texmf-dist/fonts/type1/public/txfonts/rtxi.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/txfonts/rtxsc.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfont
+s/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsy.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/txsyb.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/txfonts/txtt.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
+es/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (22 pages, 1840186 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 209 compressed objects within 3 object streams
- 56 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
+ 90 named destinations out of 1000 (max. 500000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
 

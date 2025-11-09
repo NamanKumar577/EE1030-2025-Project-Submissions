@@ -416,7 +416,7 @@ int main() {
     // }
     
     int minm = (height < width) ? height : width;
-    double *sig = calloc(minm, sizeof(double));
+    double *sig = calloc(width, sizeof(double));
 
     double *V = malloc(width*width*sizeof(double));
     jacobi_svd(A,V, sig, height, width );
@@ -427,6 +427,8 @@ int main() {
     int k;
     printf("Enter values of k ");
     scanf("%d", &k);
+    if (k>minm) k=minm;
+    
     double *Ak = calloc(height*width, sizeof(double));
     for (int i = 0; i < height; i++)
     {

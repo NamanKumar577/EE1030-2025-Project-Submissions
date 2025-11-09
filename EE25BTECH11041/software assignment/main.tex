@@ -18,7 +18,11 @@
 \usepackage{tkz-euclide} 
 \usepackage{listings}
 \usepackage{subcaption}
-\usepackage{gvv}                                        
+\usepackage{gvv}         
+\documentclass{article}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsmath}
 %\def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}     
 \usepackage{xparse}
@@ -225,6 +229,102 @@ While not the fastest, it is an excellent choice for cases where accuracy and cl
 \end{figure}
 
 
+\section*{Pseudocode for Image Compression using Jacobi SVD}
+
+% Algorithmic alone can break pages
+\begin{algorithmic}[1]
+\STATE \textbf{Define constants:} $eigens = 25$, $error = 10^{-8}$
+\STATE \textbf{Function:} matrix\_multiply($mat1$, $w1$, $h1$, $mat2$, $w2$, $h2$)
+\STATE \hspace{1em} \textbf{if} $w1 \neq h2$ \textbf{then return} 1
+\STATE \hspace{1em} \textbf{for} $i = 0$ to $h1-1$
+\STATE \hspace{2em} \textbf{for} $j = 0$ to $w2-1$
+\STATE \hspace{3em} sum = 0
+\STATE \hspace{3em} \textbf{for} $k = 0$ to $w1-1$
+\STATE \hspace{4em} sum += mat1[i*w1 + k] × mat2[k*w2 + j]
+\STATE \hspace{3em} result[i*w2 + j] = sum
+\STATE \hspace{1em} \textbf{return} 0
+\vspace{1em}
+\STATE \textbf{Function:} jacobi\_svd($A, V, sig, m, n$)
+\STATE \hspace{1em} Initialize $V = I_n$
+\STATE \hspace{1em} Repeat for $eigens$ iterations or until convergence
+\STATE \hspace{2em} For each pair of columns $(j,k)$ compute rotation
+\STATE \hspace{2em} Update $A$ and $V$
+\STATE \hspace{1em} Compute singular values $\sigma_j$
+\STATE \hspace{1em} Sort $\sigma$, $A$, and $V$ by descending order
+\vspace{1em}
+\STATE \textbf{Main Program:}
+\STATE \hspace{1em} Read input image (JPEG or PNG)
+\STATE \hspace{1em} Convert to grayscale PGM
+\STATE \hspace{1em} Apply Jacobi SVD
+\STATE \hspace{1em} Reconstruct using top $k$ singular values
+\STATE \hspace{1em} Write compressed image
+\STATE \hspace{1em} Output runtime and Frobenius error
+\end{algorithmic}
+
+
+
+\begin{algorithm}[H]
+\caption{PGM Image Compression using Singular Value Decomposition (SVD)}
+\KwIn{PGM grayscale image file path, integer $k$ (number of singular values)}
+\KwOut{Compressed image, Frobenius error, and runtime}
+
+\BlankLine
+\textbf{Step 1: Read the PGM image}\\
+open the image file in binary mode\;
+read the file header (check if format is P2 or P5)\;
+skip comment lines starting with '\#'\;
+read image width and height from next line\;
+skip the max value line (usually 255)\;
+\If{format == P5}{
+    read binary pixel values directly into array\;
+}
+\Else{
+    read ASCII pixel values using text reader\;
+}
+reshape pixel data into 2D matrix of size $(height, width)$\;
+\textit{// This loads the grayscale image as a numerical matrix.}
+
+\BlankLine
+\textbf{Step 2: Write the PGM image}\\
+clip all pixel values to [0,255] and convert to unsigned 8-bit\;
+open output file in binary mode\;
+write header: “P5 width height 255”\;
+write all pixel values in binary form\;
+\textit{// This saves any processed matrix as a valid grayscale PGM file.}
+
+\BlankLine
+\textbf{Step 3: Compress image using SVD}\\
+perform Singular Value Decomposition: $(U, S, V^T) = \text{svd}(A)$\;
+take first $k$ singular values and vectors: 
+$U_k = U[:, :k], S_k = S[:k], V_k = V^T[:k, :]$\;
+reconstruct image: $A_k = U_k \times diag(S_k) \times V_k$\;
+\textit{// Only top $k$ singular values are used to approximate the image.}
+
+\BlankLine
+\textbf{Step 4: Compute Frobenius norm}\\
+$E = \sqrt{\sum (A - A_k)^2}$\;
+\textit{// This gives the total reconstruction error between original and compressed image.}
+
+\BlankLine
+\textbf{Step 5: Main execution flow}\\
+prompt user to enter input PGM file path\;
+read the image using Step 1 → $A$\;
+convert $A$ to float type\;
+print image dimensions (width × height)\;
+prompt user for $k$ (compression rank)\;
+start timer\;
+perform compression using Step 3 → $(A_k, S)$\;
+clip $A_k$ values between 0 and 255\;
+save compressed image using Step 2\;
+compute error using Step 4\;
+display Frobenius error and runtime\;
+plot original and compressed images side by side\;
+\textit{// This shows how much quality is retained after compression.}
+
+\end{algorithm}
+
+
+
 \section{C-Code}
 \begin{verbatim}
 #include <stdio.h>
@@ -411,6 +511,7 @@ unsigned char *read_png(const char *filename, int *width, int *height) {
         perror("Cannot open PNG file");
         return NULL;
     }
+
 
     unsigned char header[8];
     fread(header, 1, 8, fp);
@@ -744,7 +845,7 @@ plt.show()
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\columnwidth]{figs/globe.jpg}
-    \caption{Original}
+    \caption{Original globe}
     \label{fig:placeholder}
 \end{figure}
 \begin{center}
@@ -771,6 +872,78 @@ plt.show()
         \centering
         \includegraphics[width=\textwidth]{figs/output3.jpg}
         \caption{For $k=5$ (C code)\\Size: 28 KB}
+    \end{subfigure}
+
+    \caption{Comparison of compressed images for different $k$ values using C code.}
+    \label{fig:compressed_c_code}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{figs/greyscale.png}
+    \caption{Original greyscale}
+    \label{fig:placeholder}
+\end{figure}
+\begin{center}
+    Size: 926Kb
+\end{center}
+\begin{figure}[H]
+    \centering
+    % Image 1
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/greyscale2.jpg}
+        \caption{For $k=50$ (C code)\\}
+    \end{subfigure}
+    \hfill
+    % Image 2
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/greyscale3.jpg}
+        \caption{For $k=25$ (C code)\\}
+    \end{subfigure}
+    \hfill
+    % Image 3
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/greyscale1.jpg}
+        \caption{For $k=5$ (C code)}
+    \end{subfigure}
+
+    \caption{Comparison of compressed images for different $k$ values using C code.}
+    \label{fig:compressed_c_code}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{figs/einstein.jpg}
+    \caption{Original einstein}
+    \label{fig:placeholder}
+\end{figure}
+\begin{center}
+    Size: 6Kb
+\end{center}
+\begin{figure}[H]
+    \centering
+    % Image 1
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/einstein3.jpg}
+        \caption{For $k=50$ (C code)\\}
+    \end{subfigure}
+    \hfill
+    % Image 2
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/einstein2.jpg}
+        \caption{For $k=25$ (C code)\\}
+    \end{subfigure}
+    \hfill
+    % Image 3
+    \begin{subfigure}[t]{0.32\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figs/einstein1.jpg}
+        \caption{For $k=5$ (C code)}
     \end{subfigure}
 
     \caption{Comparison of compressed images for different $k$ values using C code.}
